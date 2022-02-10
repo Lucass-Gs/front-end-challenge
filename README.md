@@ -15,7 +15,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] O app deverá ser criado usando React
 - [x] O usuário deve conseguir paginar a lista para encontrar novos filmes
 - [x] O usuário deve ter acesso a uma outra página com detalhes sobre o filme, ao clicar em um item na listagem
-- [ ] O usuário deve conseguir voltar para a página de listagem de filmes com os filtros ainda ativos
+- [x] O usuário deve conseguir voltar para a página de listagem de filmes com os filtros ainda ativos
 
 ### Requisitos não funcionais
 
