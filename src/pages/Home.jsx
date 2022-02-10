@@ -24,7 +24,17 @@ const Home = () => {
       }).catch(error => {
         console.log(error)
       })
-      api.get(`movie/popular?api_key=67ad6a2bd7e8260d565717be8efdc359&language=pt-BR&page=${page}`)
+      
+      const data = localStorage.getItem('genresSaved')
+      if(data){        
+        api.get(`discover/movie?api_key=67ad6a2bd7e8260d565717be8efdc359&language=pt-BR&sort_by=popularity.desc&include_adult=true&include_video=false&page=${page}&with_genres=${JSON.parse(data)}`)
+        .then(response => {
+          setResults(response.data?.results)
+          setVm({...vm, totalResults: response.data.total_results, loading: false})
+        }) 
+       return
+      }
+      api.get(`movie/popular?api_key=67ad6a2bd7e8260d565717be8efdc359&language=pt-BR&page=1`)      
       .then(response => {
           setResults(response.data.results)
           setVm({...vm, totalResults: response.data.total_results, loading: false})       
@@ -49,14 +59,14 @@ const Home = () => {
 
     setPage(currentPage)
   }
-
+  
   const handleGenreFilter = (genreValue) => {
     const alreadySelectedGenre = selectedGenres.find(genre => genre === genreValue)
     let genresArray = selectedGenres
     if (!alreadySelectedGenre) {
       genresArray.push(genreValue)
       setSelectedGenres([...selectedGenres, genreValue])
-                  
+      
     } else {
       genresArray = genresArray.filter(g => g !== genreValue)
       setSelectedGenres(genresArray)
@@ -65,22 +75,22 @@ const Home = () => {
     api.get(`discover/movie?api_key=67ad6a2bd7e8260d565717be8efdc359&language=pt-BR&sort_by=popularity.desc&include_adult=true&include_video=false&page=${page}&with_genres=${genresArray}`)
     .then(response => {
       setResults(response.data?.results)        
-                                              
-      })      
-      .catch(error => {
-        console.log(error)
-      })      
+      
+    })      
+    .catch(error => {
+      console.log(error)
+    })      
   }
   React.useEffect(()=>{
     if(!selectedGenres.length){return}
-    localStorage.setItem('genresSaved',JSON.stringify(selectedGenres))    
+    localStorage.setItem('genresSaved',JSON.stringify(selectedGenres))        
   })
   React.useEffect(()=>{
     const data = localStorage.getItem('genresSaved')
     if(data){
-      setSelectedGenres(JSON.parse(data))
+      setSelectedGenres(JSON.parse(data))    
     }
-  },[])
+  },[page])
   
   return (
     vm.loading ?
