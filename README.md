@@ -2,6 +2,10 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
 
+### Preview do projeto
+
+https://luccas-gs.vercel.app/
+
 
 ### Ajustes e melhorias
 
