@@ -25,7 +25,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] O app deverá se comportar da mesma forma na última versão estável dos seguintes browsers: Chrome, Firefox, Edge
 - [x] O app deverá ser responsivo
 
-###Extras
+### Extras
 
 - [x] O usuário deve conseguir filtrar os filmes listados por gênero, com a possibilidade de usar mais de um gênero
 - [x] O usuário deve conseguir remover filtros e a listagem deve ser atualizada de acordo com o filtro removido
