@@ -34,9 +34,9 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 * Você instalou a versão mais recente de `<NodeJs / Npm >`
 * Você tem uma máquina `<Windows / Linux / Mac>`.
 
-## 🚀 Instalando <Front-End-Challenge>
+## 🚀 Instalando Front-End-Challenge
 
-Para instalar o <Front-End-Challenge>, siga estas etapas:
+Para instalar o Front-End-Challenge, siga estas etapas:
 
    Para instalar as dependências do projeto.
 ```
@@ -45,7 +45,7 @@ Para instalar o <Front-End-Challenge>, siga estas etapas:
   
 ## ☕ Usando <Front-End-Challenge>
 
-Para usar <Front-End-Challenge>, siga estas etapas:
+Para usar o Front-End-Challenge, siga estas etapas:
 
    Para inicializar o projeto
 ```
