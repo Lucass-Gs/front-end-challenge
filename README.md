@@ -1,6 +1,6 @@
 # Front-End-Challenge
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Lucass-Gs/front-end-challenge)
 
 ### Preview do projeto
 
