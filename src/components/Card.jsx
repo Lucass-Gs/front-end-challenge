@@ -81,7 +81,7 @@ const Card = ({Results}) =>{
                 <Link to={`/details/${results.id}`} style={{ textDecoration: 'none' }}>
                 <Image src={`https://image.tmdb.org/t/p/w500/${results.poster_path}`}></Image>
                 </Link>
-                <Link to="/details" style={{ textDecoration: 'none' }}>
+                <Link to={`/details/${results.id}`} style={{ textDecoration: 'none' }}>
                 <Title>{results.title}</Title>
                 </Link>
                 <Date>
